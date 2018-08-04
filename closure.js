@@ -1,15 +1,15 @@
-let Books = function(){
+const Books = function() {
     let author = "sukumar";
-    this.setAuthor = function(newAuthor) {
+
+    this.setAuthor = (newAuthor) => {
         author = newAuthor;
     };
 
-    this.getAuthor = function(){
-        return author;
-    }
-}
+    this.getAuthor = () => author;
+};
 
-let cci = new Books();
+const cci = new Books();
+
 console.log(cci.getAuthor());
 
 cci.setAuthor("McDowel");

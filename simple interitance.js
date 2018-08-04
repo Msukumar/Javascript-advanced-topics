@@ -1,11 +1,12 @@
-let Car = function(name){
+const Car = function(name) {
     this.name = name;
-}
+};
 
-Car.prototype.getName = function(){
+Car.prototype.getName = function() {
     return this.name;
-}
+};
 
 
-let nissan = new Car("Nissan");
+const nissan = new Car("Nissan");
+
 nissan.getName();
