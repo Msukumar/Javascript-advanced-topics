@@ -10,3 +10,4 @@
 8) Simple inheritance with parent Window Object 
 9) Difference between splice and slice
 10) A small example of webworkers
+11) add(2)(3)(5) // returns 10
