@@ -1,13 +1,13 @@
-function add(x){
-    function _add(y){
-        if(typeof y !== "undefined"){
-        		x = x+y;
-            return _add;
-        }else {
-            return x;
+function sum(x) {
+    function add(y) {
+        if(typeof y === "number") {
+            x += y;
+            return add;
         }
+        return x;
     }
-    _add.valueOf = function(){return _add()};
-    return _add;
+    add.valueOf = () => add();
+    return add;
 }
-console.log(add(5)(50)(45));
+
+console.log(sum(5)(50)(45));
