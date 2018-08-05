@@ -1,8 +1,5 @@
 function sum(x) {
     const add = y => isNaN(y) ? x : sum(x + y);
-
-    add.valueOf = () => x;
-
     return add;
 }
 
