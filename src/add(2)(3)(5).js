@@ -1,21 +1,11 @@
-function add(x) {
-    var _add(y) {
-        return add(x+y);
-    }
+function sum(x) {
+    const add = y => isNaN(y) ? x : sum(x + y);
 
-    _add.valueOf = function(){
-        return x;
-    }
+    add.valueOf = () => x;
 
-    return _add;
+    return add;
 }
 
-console.log(add(2)(3)(5)); // f 10
+console.log(sum(2)(3)(5)()); // 10
 
-
-/* Still finding the best solution for this 
-
-add(2)(3)(5) == 10  // true
-add(2)(3)(5) === 10  // false
-
-*/
+module.exports = sum;
